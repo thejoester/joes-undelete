@@ -1,0 +1,32 @@
+{
+	"id": "joes-undelete",
+	"title": "Joe's Undelete",
+	"description": "A simple module that adds an 'Undelete' button to the sidebar, allowing you to restore deleted items.",
+	"version": "1.0.0",
+	"compatibility": {
+		"minimum": "14",
+		"verified": "14"
+	},
+	"authors": [
+		{
+			"name": "TheJoester",
+			"url": "https://github.com/thejoester/",
+			"discord": "thejoester",
+			"flags": {}
+		}
+	],
+	"esmodules": [
+		"scripts/main.js"
+	],
+	"styles": [
+		"styles/undelete.css"
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
+	],
+	"packs": []
+}

@@ -1,0 +1,126 @@
+#joes-undelete .window-content {
+	overflow: hidden auto;
+}
+
+#joes-undelete .undelete-toolbar {
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+#joes-undelete .undelete-toolbar #search {
+	flex: 1;
+}
+
+#joes-undelete .undelete-toolbar .delete-all {
+	flex: 0 0 auto;
+	width: auto;
+}
+
+#joes-undelete #undelete-items {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	padding-top: 0.3rem;
+}
+
+#joes-undelete #undelete-items li {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	transition: all 0.1s ease-in-out;
+	padding: 0.3rem;
+	margin: 0.1rem;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+#joes-undelete #undelete-items li.hidden {
+	display: none;
+}
+
+#joes-undelete #undelete-items li:hover {
+	background-color: rgba(0, 0, 0, 0.16);
+}
+
+#joes-undelete #undelete-items li.deletion-pending {
+	background-color: rgba(255, 0, 0, 0.24);
+}
+
+#joes-undelete #undelete-items li.deletion-pending:hover {
+	background-color: rgba(133, 2, 2, 0.36);
+}
+
+#joes-undelete #undelete-items li .undelete-info {
+	flex: 1 1 auto;
+	min-width: 0;
+	display: flex;
+	align-items: baseline;
+	gap: 0.75rem;
+}
+
+#joes-undelete #undelete-items li .undelete-info label {
+	flex: 1 1 auto;
+	min-width: 0;
+	font-weight: bold;
+}
+
+#joes-undelete #undelete-items li .undelete-info .notes {
+	flex: 0 1 auto;
+	margin: 0;
+}
+
+#joes-undelete #undelete-items li .undelete-info .parent {
+	font-style: italic;
+}
+
+#joes-undelete #undelete-items li .undelete-info .time {
+	flex: 0 0 auto;
+	opacity: 0.75;
+}
+
+#joes-undelete #undelete-items li .undelete-item-img {
+	flex: 0 0 auto;
+	height: 32px;
+	border-radius: 5px;
+	aspect-ratio: 1;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#joes-undelete #undelete-items li .undelete-item-img i {
+	font-size: 32px;
+}
+
+#joes-undelete #undelete-items li .restore-item:hover,
+#joes-undelete #undelete-items li .preview-item:hover,
+#joes-undelete #undelete-items li .permanently-delete:hover {
+	text-shadow: 0 0 8px var(--color-shadow-primary);
+	cursor: pointer;
+}
+
+#joes-undelete #undelete-items li .notes,
+#joes-undelete #undelete-items li label {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#joes-undelete #undelete-items li .undelete-buttons-container {
+	flex: 0 0 auto;
+	margin-left: auto;
+	display: flex;
+	gap: 0.6rem;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border-left: 1px inset;
+	padding-left: 0.5rem;
+}
+
+button.joes-undelete-open {
+	width: 100%;
+}

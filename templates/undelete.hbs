@@ -1,0 +1,27 @@
+<form action="">
+	<div class="undelete-toolbar">
+		<input type="search" id="search" name="search" value="" aria-label="{{localize "joes-undelete.app.search"}}" placeholder="{{localize "joes-undelete.app.search"}}" autocomplete="off">
+		<button type="button" class="delete-all" data-tooltip="{{localize "joes-undelete.app.delete-all"}}" aria-label="{{localize "joes-undelete.app.delete-all"}}">
+			<i class="fa-duotone fa-trash-can-list"></i>
+		</button>
+	</div>
+	<ol id="undelete-items">
+		{{#each items}}
+		<li data-index="{{this.index}}" data-search="{{this.documentName}} {{this.name}} {{this.parent}}"{{#if this.willBeDeleted}} data-tooltip="{{localize "joes-undelete.app.deleteOnRefresh"}}" class="deletion-pending"{{/if}}>
+			<div class="undelete-item-img"{{#if this.img}} style="background-image: url('{{this.img}}');"{{/if}}>
+				{{#if this.icon}}<i class="{{this.icon}}"></i>{{/if}}
+			</div>
+			<div class="undelete-info">
+				<label>{{this.documentName}}: {{this.name}}</label>
+				<span class="notes parent">{{this.parent}}</span>
+				<span class="notes time">{{this.time}}</span>
+			</div>
+			<div class="undelete-buttons-container">
+				<i data-tooltip="{{localize "joes-undelete.app.restore-item"}}" class="fa-duotone fa-trash-undo restore-item"></i>
+				<i data-tooltip="{{localize "joes-undelete.app.preview-item"}}" class="fa-duotone fa-magnifying-glass preview-item"></i>
+				<i data-tooltip="{{localize "joes-undelete.app.permanently-delete"}}" class="fa-duotone fa-trash-can-slash permanently-delete"></i>
+			</div>
+		</li>
+		{{/each}}
+	</ol>
+</form>
