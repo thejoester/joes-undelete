@@ -3,6 +3,9 @@
 	"title": "Joe's Undelete",
 	"description": "A simple module that adds an 'Undelete' button to the sidebar, allowing you to restore deleted items.",
 	"version": "1.0.0",
+	"url": "https://github.com/thejoester/joes-undelete",
+	"manifest": "https://github.com/thejoester/joes-undelete/releases/latest/download/module.json",
+	"download": "https://github.com/thejoester/joes-undelete/releases/latest/download/joes-undelete.zip",
 	"compatibility": {
 		"minimum": "14",
 		"verified": "14"
