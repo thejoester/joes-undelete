@@ -1,0 +1,11 @@
+name: Release
+on:
+  release:
+    types: [published]
+permissions:
+  contents: write
+jobs:
+  release:
+    uses: thejoester/foundry-release-action/.github/workflows/release.yml@v1
+    with:
+      module-id: joes-undelete
